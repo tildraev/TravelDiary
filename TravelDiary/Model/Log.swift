@@ -8,7 +8,7 @@
 import Foundation
 
 /**
-Creates our Log object - *MODEL*
+Initializes a Log object - *MODEL*
  - Properties:
   - Title: The *Sring* identifier for the Log.
   - Address: The *String* representation for where the user was.
@@ -18,15 +18,21 @@ Creates our Log object - *MODEL*
 
 class Log {
     
-    let logTitle: String
-    let logAddress: String
-    let logeDate: Date
-    let logBody: String
+    var logTitle: String
+    var logAddress: String
+    var logDate: Date
+    var logBody: String
     
     init(logTitle: String, logAddress: String, logDate: Date = Date(), logBody: String) {
         self.logTitle = logTitle
         self.logAddress = logAddress
-        self.logeDate = logDate
+        self.logDate = logDate
         self.logBody = logBody
     }
 } // End of class
+
+extension Log: Equatable {
+    static func == (lhs: Log, rhs: Log) -> Bool {
+        return lhs.logTitle == rhs.logTitle && lhs.logAddress == rhs.logAddress && lhs.logDate == rhs.logDate && lhs.logBody == rhs.logBody
+    }
+}
