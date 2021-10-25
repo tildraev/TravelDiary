@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Log List Table View Controller-->
         <scene sceneID="hfG-oU-ZE3">
             <objects>
-                <tableViewController id="YDl-YN-noy" sceneMemberID="viewController">
+                <tableViewController id="YDl-YN-noy" customClass="LogListTableViewController" customModule="TravelDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dpW-Hw-qdj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="TyL-Gn-Mad" detailTextLabel="lzd-7C-PAW" style="IBUITableViewCellStyleValue1" id="yUy-BP-4Vk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logCell" textLabel="TyL-Gn-Mad" detailTextLabel="lzd-7C-PAW" style="IBUITableViewCellStyleValue1" id="yUy-BP-4Vk">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yUy-BP-4Vk" id="UCe-Na-1oO">
@@ -62,45 +62,45 @@
             </objects>
             <point key="canvasLocation" x="1638" y="78"/>
         </scene>
-        <!--View Controller-->
+        <!--Log Detail View Controller-->
         <scene sceneID="ANW-Vy-tPS">
             <objects>
-                <viewController id="T5m-Ev-kIo" sceneMemberID="viewController">
+                <viewController id="T5m-Ev-kIo" customClass="LogDetailViewController" customModule="TravelDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RW9-y1-wDe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 08-12-2022 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpN-cc-Ybr">
-                                <rect key="frame" x="296" y="92" width="114" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpN-cc-Ybr">
+                                <rect key="frame" x="410" y="92" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-S8-YD3">
-                                <rect key="frame" x="44" y="92" width="248" height="76"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-S8-YD3">
+                                <rect key="frame" x="44" y="92" width="362" height="41"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-er-3Yq">
-                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-er-3Yq">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="18.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-Qh-1jL">
-                                        <rect key="frame" x="0.0" y="42" width="119" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-Qh-1jL">
+                                        <rect key="frame" x="0.0" y="22.5" width="362" height="18.5"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="OBi-xj-Qty">
-                                <rect key="frame" x="44" y="188" width="366" height="274.5"/>
+                                <rect key="frame" x="44" y="153" width="366" height="274.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OBi-xj-Qty" secondAttribute="height" multiplier="4:3" id="iBg-Vo-lT1"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-lw-EES">
-                                <rect key="frame" x="44" y="466.5" width="366" height="391.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tell us about your adventures!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-lw-EES">
+                                <rect key="frame" x="44" y="431.5" width="366" height="426.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -124,8 +124,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O9q-fB-PAF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pYC-J0-cm5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pYC-J0-cm5">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="T5m-Ev-kIo" id="NQh-2p-KTX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="logAddressTextField" destination="m0p-Qh-1jL" id="zkE-rn-0p9"/>
+                        <outlet property="logBodyTextView" destination="ETO-lw-EES" id="gds-ae-O5E"/>
+                        <outlet property="logDateLabel" destination="xpN-cc-Ybr" id="ZN4-AT-h4q"/>
+                        <outlet property="logTitleTextField" destination="2BF-er-3Yq" id="WDu-uf-DXF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fR-io-BjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,12 +161,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HDa-vE-EJG"/>
+        <segue reference="Tib-mX-2Jp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="default" width="1260" height="624"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
