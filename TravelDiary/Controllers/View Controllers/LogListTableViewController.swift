@@ -53,7 +53,7 @@ class LogListTableViewController: UITableViewController {
         if segue.identifier == "toDetailVC" {
             /// Index - Discovering what row the user has seleceted
             if let index = tableView.indexPathForSelectedRow {
-                /// Destination - Verifying the segues destination is to the *ViewController* we want. This also allows us to access the properties on that *ViewController*
+                /// Destination - Verifying the segues destination leads to the *ViewController* we want. This also allows us to access the properties on that *ViewController*
                 if let destination = segue.destination as? LogDetailViewController {
                     /// Object to send - Using the index we discovered earlier we retrieve the *Log* that matches in our *logs* array.
                     let log = LogController.sharedInstance.logs[index.row]
