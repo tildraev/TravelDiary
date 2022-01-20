@@ -10,6 +10,14 @@ import UIKit
 class LogListTableViewController: UITableViewController {
 
     // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        /// Telling the tableview to scale its cell height to its content
+        tableView.rowHeight = UITableView.automaticDimension
+        /// Giving the TableView an estimated height to start calculating from
+        tableView.estimatedRowHeight = 70
+    }
     override func viewWillAppear(_ animated: Bool) {
         /// When the view appears from the detailVC we need to reload the tableview to see the changes.
         tableView.reloadData()
@@ -22,13 +30,12 @@ class LogListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /// Setting the reuse Identifier to match the cells we designed on the storyboard
-        let cell = tableView.dequeueReusableCell(withIdentifier: "logCell", for: indexPath)
+        /// Setting the reuse Identifier to match the cells we designed on the storyboard. We also type cast our cell from a type UITableViewCell to our custom LogListTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "logCell", for: indexPath) as? LogListTableViewCell else { return UITableViewCell() }
         /// Using the *IndexPath* from the row to find what **Log** should be displayed
         let log = LogController.sharedInstance.logs[indexPath.row]
-        /// Configuring the labels on the cell with the correct data
-        cell.textLabel?.text = log.logTitle
-        cell.detailTextLabel?.text = log.logDate.stringValue()
+        /// Calling the buildCell method on our LogListTableViewCell
+        cell.buildCell(with: log)
         /// Passing the fully configured cell to be displayed
         return cell
     }

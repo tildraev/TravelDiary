@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4j9-B2-T1d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4j9-B2-T1d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,30 +17,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logCell" textLabel="TyL-Gn-Mad" detailTextLabel="lzd-7C-PAW" style="IBUITableViewCellStyleValue1" id="yUy-BP-4Vk">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logCell" rowHeight="70" id="yUy-BP-4Vk" customClass="LogListTableViewCell" customModule="TravelDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yUy-BP-4Vk" id="UCe-Na-1oO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TyL-Gn-Mad">
-                                            <rect key="frame" x="20" y="15" width="25" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaf-aw-BLf">
+                                            <rect key="frame" x="20" y="11" width="104" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lzd-7C-PAW">
-                                            <rect key="frame" x="361" y="15" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuL-CD-Kkn">
+                                            <rect key="frame" x="20" y="43" width="379" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="jSi-Fe-zOh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daH-ey-O5X">
+                                            <rect key="frame" x="312" y="11" width="82" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="KuL-CD-Kkn" secondAttribute="bottom" constant="10" id="SJR-Xr-26P"/>
+                                        <constraint firstItem="KuL-CD-Kkn" firstAttribute="leading" secondItem="UCe-Na-1oO" secondAttribute="leadingMargin" id="VoK-Hg-xok"/>
+                                        <constraint firstItem="kaf-aw-BLf" firstAttribute="leading" secondItem="UCe-Na-1oO" secondAttribute="leadingMargin" id="X00-fe-TRm"/>
+                                        <constraint firstItem="daH-ey-O5X" firstAttribute="trailing" secondItem="UCe-Na-1oO" secondAttribute="trailingMargin" id="ZLT-3i-BxP"/>
+                                        <constraint firstItem="KuL-CD-Kkn" firstAttribute="top" secondItem="kaf-aw-BLf" secondAttribute="bottom" constant="8" symbolic="YES" id="ayc-FC-5Un"/>
+                                        <constraint firstItem="daH-ey-O5X" firstAttribute="top" secondItem="UCe-Na-1oO" secondAttribute="topMargin" id="dGu-KO-iCJ"/>
+                                        <constraint firstItem="kaf-aw-BLf" firstAttribute="top" secondItem="UCe-Na-1oO" secondAttribute="topMargin" id="o3D-U4-Gmn"/>
+                                        <constraint firstAttribute="trailing" secondItem="KuL-CD-Kkn" secondAttribute="trailing" constant="15" id="t9t-Qj-wHe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addressTextLabel" destination="KuL-CD-Kkn" id="tbH-hu-Own"/>
+                                    <outlet property="dateTextLabel" destination="daH-ey-O5X" id="GiX-Pn-aa3"/>
+                                    <outlet property="nameLabelTextLabel" destination="kaf-aw-BLf" id="mAw-6n-yKS"/>
                                     <segue destination="T5m-Ev-kIo" kind="show" identifier="toDetailVC" id="Tib-mX-2Jp"/>
                                 </connections>
                             </tableViewCell>
@@ -60,7 +80,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOh-fx-3ez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="78"/>
+            <point key="canvasLocation" x="1637.68115942029" y="77.678571428571431"/>
         </scene>
         <!--Log Detail View Controller-->
         <scene sceneID="ANW-Vy-tPS">
