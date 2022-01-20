@@ -14,8 +14,11 @@ class DiaryCellTableViewCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    func updateView() {
+    func updateView(entry: Entry) {
         //TODO: - Finish this
+        tripNameLabel.text = entry.title
+        addressLabel.text = entry.address
+        dateLabel.text = entry.date.stringValue()
     }
 
 } //End of class

@@ -16,6 +16,8 @@
 		D214AE0B2799CB7A0043FB5A /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE0A2799CB7A0043FB5A /* DiaryTableViewController.swift */; };
 		D214AE0F2799CBB40043FB5A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE0E2799CBB40043FB5A /* DetailViewController.swift */; };
 		D214AE112799CD450043FB5A /* DiaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE102799CD450043FB5A /* DiaryCellTableViewCell.swift */; };
+		D214AE142799D4C10043FB5A /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE132799D4C10043FB5A /* Entry.swift */; };
+		D214AE182799DF1A0043FB5A /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE172799DF1A0043FB5A /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D214AE0A2799CB7A0043FB5A /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
 		D214AE0E2799CBB40043FB5A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D214AE102799CD450043FB5A /* DiaryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellTableViewCell.swift; sourceTree = "<group>"; };
+		D214AE132799D4C10043FB5A /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		D214AE172799DF1A0043FB5A /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,21 +66,22 @@
 		413AA7EF2724B792008D6631 /* TravelDiary */ = {
 			isa = PBXGroup;
 			children = (
+				D214AE152799D4C60043FB5A /* Models */,
+				413AA80427271142008D6631 /* Views */,
 				D214AE082799CB530043FB5A /* Controllers */,
 				413AA81327273B5A008D6631 /* Helper Files */,
 				413AA80527271158008D6631 /* Resources */,
-				413AA80427271142008D6631 /* Storyboards */,
 			);
 			path = TravelDiary;
 			sourceTree = "<group>";
 		};
-		413AA80427271142008D6631 /* Storyboards */ = {
+		413AA80427271142008D6631 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				413AA7F62724B792008D6631 /* Main.storyboard */,
 				413AA7FB2724B794008D6631 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		413AA80527271158008D6631 /* Resources */ = {
@@ -101,6 +106,7 @@
 		D214AE082799CB530043FB5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D214AE162799DF0E0043FB5A /* Model Controllers */,
 				D214AE092799CB5C0043FB5A /* View Controllers */,
 			);
 			path = Controllers;
@@ -122,6 +128,22 @@
 				D214AE102799CD450043FB5A /* DiaryCellTableViewCell.swift */,
 			);
 			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		D214AE152799D4C60043FB5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D214AE132799D4C10043FB5A /* Entry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D214AE162799DF0E0043FB5A /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D214AE172799DF1A0043FB5A /* EntryController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D214AE142799D4C10043FB5A /* Entry.swift in Sources */,
 				413AA7F12724B792008D6631 /* AppDelegate.swift in Sources */,
 				D214AE112799CD450043FB5A /* DiaryCellTableViewCell.swift in Sources */,
 				D214AE0B2799CB7A0043FB5A /* DiaryTableViewController.swift in Sources */,
 				D214AE0F2799CBB40043FB5A /* DetailViewController.swift in Sources */,
 				413AA7F32724B792008D6631 /* SceneDelegate.swift in Sources */,
+				D214AE182799DF1A0043FB5A /* EntryController.swift in Sources */,
 				413AA81527273B77008D6631 /* DateHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
