@@ -13,6 +13,9 @@
 		413AA7FA2724B794008D6631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413AA7F92724B794008D6631 /* Assets.xcassets */; };
 		413AA7FD2724B794008D6631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413AA7FB2724B794008D6631 /* LaunchScreen.storyboard */; };
 		413AA81527273B77008D6631 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA81427273B77008D6631 /* DateHelper.swift */; };
+		D214AE0B2799CB7A0043FB5A /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE0A2799CB7A0043FB5A /* DiaryTableViewController.swift */; };
+		D214AE0F2799CBB40043FB5A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE0E2799CBB40043FB5A /* DetailViewController.swift */; };
+		D214AE112799CD450043FB5A /* DiaryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214AE102799CD450043FB5A /* DiaryCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		413AA7FC2724B794008D6631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		413AA7FE2724B794008D6631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413AA81427273B77008D6631 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		D214AE0A2799CB7A0043FB5A /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
+		D214AE0E2799CBB40043FB5A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D214AE102799CD450043FB5A /* DiaryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		413AA7EF2724B792008D6631 /* TravelDiary */ = {
 			isa = PBXGroup;
 			children = (
+				D214AE082799CB530043FB5A /* Controllers */,
 				413AA81327273B5A008D6631 /* Helper Files */,
 				413AA80527271158008D6631 /* Resources */,
 				413AA80427271142008D6631 /* Storyboards */,
@@ -89,6 +96,32 @@
 				413AA81427273B77008D6631 /* DateHelper.swift */,
 			);
 			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		D214AE082799CB530043FB5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D214AE092799CB5C0043FB5A /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D214AE092799CB5C0043FB5A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D214AE0A2799CB7A0043FB5A /* DiaryTableViewController.swift */,
+				D214AE0E2799CBB40043FB5A /* DetailViewController.swift */,
+				D214AE122799CE700043FB5A /* Custom Cells */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D214AE122799CE700043FB5A /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D214AE102799CD450043FB5A /* DiaryCellTableViewCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				413AA7F12724B792008D6631 /* AppDelegate.swift in Sources */,
+				D214AE112799CD450043FB5A /* DiaryCellTableViewCell.swift in Sources */,
+				D214AE0B2799CB7A0043FB5A /* DiaryTableViewController.swift in Sources */,
+				D214AE0F2799CBB40043FB5A /* DetailViewController.swift in Sources */,
 				413AA7F32724B792008D6631 /* SceneDelegate.swift in Sources */,
 				413AA81527273B77008D6631 /* DateHelper.swift in Sources */,
 			);
