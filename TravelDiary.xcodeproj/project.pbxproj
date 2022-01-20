@@ -12,10 +12,6 @@
 		413AA7F82724B792008D6631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413AA7F62724B792008D6631 /* Main.storyboard */; };
 		413AA7FA2724B794008D6631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413AA7F92724B794008D6631 /* Assets.xcassets */; };
 		413AA7FD2724B794008D6631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413AA7FB2724B794008D6631 /* LaunchScreen.storyboard */; };
-		413AA80927271D37008D6631 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA80827271D37008D6631 /* Log.swift */; };
-		413AA80D2727216C008D6631 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA80C2727216C008D6631 /* LogController.swift */; };
-		413AA8102727358A008D6631 /* LogListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA80F2727358A008D6631 /* LogListTableViewController.swift */; };
-		413AA812272735A0008D6631 /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA811272735A0008D6631 /* LogDetailViewController.swift */; };
 		413AA81527273B77008D6631 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA81427273B77008D6631 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,10 +23,6 @@
 		413AA7F92724B794008D6631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413AA7FC2724B794008D6631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		413AA7FE2724B794008D6631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		413AA80827271D37008D6631 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		413AA80C2727216C008D6631 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
-		413AA80F2727358A008D6631 /* LogListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogListTableViewController.swift; sourceTree = "<group>"; };
-		413AA811272735A0008D6631 /* LogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
 		413AA81427273B77008D6631 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,8 +56,6 @@
 		413AA7EF2724B792008D6631 /* TravelDiary */ = {
 			isa = PBXGroup;
 			children = (
-				413AA80727271CCF008D6631 /* Model */,
-				413AA80A2727214A008D6631 /* Controllers */,
 				413AA81327273B5A008D6631 /* Helper Files */,
 				413AA80527271158008D6631 /* Resources */,
 				413AA80427271142008D6631 /* Storyboards */,
@@ -91,40 +81,6 @@
 				413AA7FE2724B794008D6631 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		413AA80727271CCF008D6631 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				413AA80827271D37008D6631 /* Log.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		413AA80A2727214A008D6631 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				413AA80E27273568008D6631 /* View Controllers */,
-				413AA80B27272158008D6631 /* Model Controller */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		413AA80B27272158008D6631 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-				413AA80C2727216C008D6631 /* LogController.swift */,
-			);
-			path = "Model Controller";
-			sourceTree = "<group>";
-		};
-		413AA80E27273568008D6631 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				413AA80F2727358A008D6631 /* LogListTableViewController.swift */,
-				413AA811272735A0008D6631 /* LogDetailViewController.swift */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		413AA81327273B5A008D6631 /* Helper Files */ = {
@@ -206,13 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413AA80D2727216C008D6631 /* LogController.swift in Sources */,
 				413AA7F12724B792008D6631 /* AppDelegate.swift in Sources */,
 				413AA7F32724B792008D6631 /* SceneDelegate.swift in Sources */,
-				413AA80927271D37008D6631 /* Log.swift in Sources */,
-				413AA812272735A0008D6631 /* LogDetailViewController.swift in Sources */,
 				413AA81527273B77008D6631 /* DateHelper.swift in Sources */,
-				413AA8102727358A008D6631 /* LogListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
